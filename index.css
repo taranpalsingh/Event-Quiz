@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.question{
+	background-color: #bc82d3;
+	padding: 20px;
+	font-size: 36px;
+	font-weight: 500;
+	color: white;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.option{
+	background-color: #bc82d3;
+	padding: 10px;
+	font-size: 24px;
+	font-weight: 400;
+	border-radius: 10px;
+	width: 70%;	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.selected{
+	background-color: #953eb8;	
+}
+
+.unselected{
+	background-color: #bc82d3;	
+}
+
+.space{
+	height: 100px;
+	width: 100%;
+}
+
+input{
+	outline: none;
+}
+
+.footer{
+	position: fixed;
+	bottom: 20px;
+}
+
+#submit{
+	right: 10px;
+}

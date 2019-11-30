@@ -1,0 +1,57 @@
+[
+    {
+        "question": "TAVR is an established treatment modality for:",
+        "options":[
+            "Severe Aortic valve stenosis",
+            "Severe Coronary artery stenosis",
+            "Repairing a thoracic aneurysm"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Full form of TAVR is:",
+        "options":[
+            "Transcaval Aortic Vascular Repair",
+            "Transcatheter Aortic Valve Replacement",
+            "Transfemoral Artery Vascular Repair"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Benefits of TAVR:",
+        "options":[
+            "Non-Surgical",
+            "Faster Recovery",
+            "No Chest Scars",
+            "Faster discharge",
+            "All of above",
+            "None of the above"
+        ],
+        "correct": 4
+    },
+    {
+        "question": "Diagnostic tests for Severe Aortic stenosis include:",
+        "options":[
+            "ECHO",
+            "ECG",
+            "CT Scan",
+            "MRI", 
+            "Options 1,2,3", 
+            "Options 2,3,4",
+            "All of above",
+            "None of the above"
+        ],
+        "correct": 4
+    },
+    {
+        "question": "Brand name of First Indian TAVR Device:",
+        "options":[
+            "Myvalve",
+            "Myval",
+            "Meres",
+            "Biomime"
+        ],
+        "correct": 1
+    }
+
+]
