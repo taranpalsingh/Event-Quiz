@@ -4,11 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./quiz.css">
   <title>Quiz</title>
 </head>
 <body>
   <div class="container my-5">
+    <div class="row">
+      <div class="col-4">
+          <img class="float-left" src="../logo.png" alt="Logo">
+      </div>
+      
+      <div class="col-4 text-center">
+          <h2 class="questionNumberDisplay"></h2>
+      </div>
+      <div class="col-4 text-right">
+          <h2 class="playersName"></h2>
+      </div>
+    </div>
     <div class="row">
       <div class="col-10 offset-md-1 text-center question">
       </div>
@@ -45,10 +57,10 @@
         three      
       </div> -->
     </div>
-    <div class="footer">
-      <button class="btn btn-danger float-left" id="end">Quit</button>
-      <button class="btn btn-primary float-right" id="submit">Submit</button>    
-    </div>
+    <!-- <div class="footer"> -->
+      <button class="btn quit-btn float-left" id="quit">Quit</button>
+      <button class="btn submit-btn float-right" id="submit">Submit</button>    
+    <!-- </div> -->
   </div>
 </body>
 <script
@@ -57,5 +69,5 @@
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
-<script src="./index.js"></script>
+<script src="./quiz.js"></script>
 </html>

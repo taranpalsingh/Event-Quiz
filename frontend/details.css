@@ -1,0 +1,23 @@
+label{
+	font-weight: 500;
+	font-size: 20px;
+}
+
+h1{
+	line-height: 75px;
+}
+img{
+	width: 150px;
+	height: 75px;
+	position: fixed;
+}
+
+body{
+	background-image: url("../medical2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.reqd{
+	border-color: red;
+}

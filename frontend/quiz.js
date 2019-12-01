@@ -1,5 +1,5 @@
 let prevClicked = null;
-let score = 0;
+let score = 0, id;
 let questionNumber = 0;
 let questionSelected, options, answer;
 const qaBank = [
@@ -61,20 +61,57 @@ const qaBank = [
 
 function restartQuestion(){
   
+  console.log(questionNumber)
+  if(questionNumber==5){
+    $.ajax({
+      "async": true,
+      "crossDomain": true,
+      "url": "http://localhost:3000/users/"+id+"/"+score,
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      // "data": JSON.stringify(data),
+      success: (res)=>{
+        
+        alert("Your score is: "+score);
+        window.location.href = "details.html"
+        // console.log(res);
+      }
+    })
+  }
+
   prevClicked = null;
 
-  questionSelected = qaBank[questionNumber];
-  options = questionSelected.options;
-  answer = questionSelected.options[questionSelected.correct];
-  console.log(answer);
+  if(questionNumber < 5){
 
-  $(".question").html(questionSelected.question);
-  createOptions(options);
+    questionSelected = qaBank[questionNumber];
+    options = questionSelected.options;
+    answer = questionSelected.options[questionSelected.correct];
+    console.log(answer);
+  
+    $(".question").html(questionSelected.question);
+    createOptions(options);
+
+    $(".questionNumberDisplay").html("Question: "+(questionNumber+1));
+
+  }  
 }
 
 $(document).ready(()=>{
 
+  let params = (new URL(document.location)).searchParams;
+  let name = params.get("name");
+  id = params.get("id");
+  console.log(id + " , "+ name);
+  $(".playersName").html(name);
+  
   restartQuestion();
+  
+  $("#quit").click(()=>{
+    window.location.href = "details.html"
+  });
+
   $("#submit").click(()=>{
     // console.log(prevClicked);
     if(prevClicked == null){
@@ -87,33 +124,18 @@ $(document).ready(()=>{
         score++;
         questionNumber++;
         restartQuestion();
+      
         console.log("score: ",score);
         
       }
       else{
-        alert("No")
         questionNumber++;
         restartQuestion();
         console.log("score: ",score);
-      }// console.log(prevClicked + " selected")
+      }
     }
   })
 });
-
-
-// function addDisease(disease){
-//   let btn = document.createElement('button');
-//   if(disease == predictedDisease)
-//     btn.classList.add('btn', 'btn-success', 'btn-selected', 'btnDisease', 'mx-2', 'my-2')
-//   else
-//     btn.classList.add('btn', 'btn-unselected', 'btnDisease', 'mx-2', 'my-2');
-//   btn.textContent = disease;
-//   btn.setAttribute('id', disease);
-//   btn.setAttribute('onclick', "diseaseOnClick(this.id)");
-
-//   let btnWrap = document.getElementById('buttonWrapper');
-//   btnWrap.appendChild(btn);
-// }
 
 
 function optionSelected(id){
@@ -121,17 +143,9 @@ function optionSelected(id){
   let classes = document.getElementById(id).classList.value.split(" ");
 
   if(classes.includes("unselected")){
-    // console.log("unselected");
-    
     document.getElementById(id).classList.remove("unselected");
     document.getElementById(id).classList.add("selected");    
   }
-  // else if(classes.includes("selected")){
-    // console.log("selected");
-    // document.getElementById(id).classList.remove("btn-success", "btn-selected");
-    // document.getElementById(id).classList.remove("selected");
-    // document.getElementById(id).classList.add("unselected");    
-  // }
 
   if(prevClicked != null && prevClicked != id){
     document.getElementById(prevClicked).classList.remove("selected");
