@@ -1,4 +1,5 @@
 $(document).ready(()=>{
+  startServer();
   // $("#submit").click(()=>{
   //   var radioValue = $("input[name='gender']:checked").val();
   //   console.log("submitting");
@@ -64,6 +65,21 @@ function postData(data){
     success: (res)=>{
       console.log(res);
       window.location.href = "quiz.html?id="+res._id+"&name="+res.name;
+    }
+  })
+}
+
+function startServer(){
+  $.ajax({
+    "async": true,
+    "crossDomain": true,
+    "url": "https://doctorsquiz.herokuapp.com/",
+    "method": "GET",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    success: (res)=>{
+      console.log(res);
     }
   })
 }

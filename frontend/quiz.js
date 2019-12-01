@@ -75,7 +75,7 @@ function restartQuestion(){
       success: (res)=>{
         
         alert("Your score is: "+score);
-        window.location.href = "details.html"
+        window.location.href = "index.html"
         // console.log(res);
       }
     })
@@ -109,7 +109,7 @@ $(document).ready(()=>{
   restartQuestion();
   
   $("#quit").click(()=>{
-    window.location.href = "details.html"
+    window.location.href = "index.html"
   });
 
   $("#submit").click(()=>{
