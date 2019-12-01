@@ -55,7 +55,7 @@ function postData(data){
   $.ajax({
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:3000/users",
+    "url": "https://doctorsquiz.herokuapp.com/users",
     "method": "POST",
     "headers": {
       "Content-Type": "application/json"
