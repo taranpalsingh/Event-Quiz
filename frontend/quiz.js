@@ -1,5 +1,5 @@
 let prevClicked = null;
-let score = 0, id;
+let score = 0, id, name;
 let questionNumber = 0;
 let questionSelected, options, answer;
 const qaBank = [
@@ -61,7 +61,8 @@ const qaBank = [
 
 function restartQuestion(){
   
-  console.log(questionNumber)
+  $(".submit-btn").css("background-color","#bc82d3");   
+  // console.log(questionNumber)
   if(questionNumber==5){
     $.ajax({
       "async": true,
@@ -75,7 +76,7 @@ function restartQuestion(){
       success: (res)=>{
         
         alert("Your score is: "+score);
-        window.location.href = "index.html"
+        window.location.href = "result.html?name="+name+"&score="+score;
         // console.log(res);
       }
     })
@@ -101,7 +102,7 @@ function restartQuestion(){
 $(document).ready(()=>{
 
   let params = (new URL(document.location)).searchParams;
-  let name = params.get("name");
+  name = params.get("name");
   id = params.get("id");
   console.log(id + " , "+ name);
   $(".playersName").html(name);
@@ -109,7 +110,7 @@ $(document).ready(()=>{
   restartQuestion();
   
   $("#quit").click(()=>{
-    window.location.href = "index.html"
+    window.location.href = "details.html"
   });
 
   $("#submit").click(()=>{
@@ -144,7 +145,8 @@ function optionSelected(id){
 
   if(classes.includes("unselected")){
     document.getElementById(id).classList.remove("unselected");
-    document.getElementById(id).classList.add("selected");    
+    document.getElementById(id).classList.add("selected"); 
+    $(".submit-btn").css("background-color","#8f248d");   
   }
 
   if(prevClicked != null && prevClicked != id){

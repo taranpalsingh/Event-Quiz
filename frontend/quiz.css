@@ -3,6 +3,11 @@
 	padding: 0;
 }
 
+img{
+	width: 150px;
+	height: 75px;
+}
+
 .question{
 	background-color: #944393;
 	padding: 20px;
@@ -33,10 +38,6 @@
 	background-color: #bc82d3;	
 }
 
-img{
-	width: 150px;
-	height: 75px;
-}
 
 h2{
 	line-height: 75px;
@@ -85,7 +86,7 @@ div{
 }
 
 body{
-	background-image: url("medical2.jpg");
+	background-image: url("15002.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }

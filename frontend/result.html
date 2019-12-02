@@ -4,22 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./result.css">
   <title>Quiz</title>
 </head>
 <body>
-  <canvas id="canvas"></canvas>
-  <div class="container">
-    <div class="headings text-center">
-      <img class="" src="logo.png" alt="Logo">
-      <h1>Welcome to</h1>
-      <h3>Event Name</h3>
-      <h3>(Tag Line)</h3>
-      <h4>Participate in the Quiz</h4>
-    </div>
-    <div class="text-center">
-        <button class="mt-5 btn">Click here</button>
-    </div>
+
+  <div class="container text-center">
+    <img class="text-center" src="logo.png" alt="Logo">
+    <h1>Congratulations</h1>
+    <h2 class="name"></h2>
+    <h2 class="score"></h2>
+  </div>
+  <div class="text-center">
+      <button class="mt-5 btn">Start again</button>
   </div>
 </body>
 <script
@@ -28,5 +25,7 @@
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
-<script src="./index.js"></script>
+<script src="confetti.min.js"></script>
+<script src="confetti.js"></script>
+<script src="./result.js"></script>
 </html>
