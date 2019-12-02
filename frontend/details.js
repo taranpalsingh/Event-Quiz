@@ -20,7 +20,9 @@ $(document).ready(()=>{
   //   postData(values);
     
   // });
-
+  $("#back").click(()=>{
+    window.location.href = "index.html";
+  })
   $('#submit').click(function() {
 
     // e.preventDefault();
