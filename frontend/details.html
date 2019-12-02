@@ -8,15 +8,18 @@
   <title>Quiz</title>
 </head>
 <body>
-  <div class="container mt-5">
-    <img class="float-left" src="logo.png" alt="Logo">
+  <div class="container mt-3">
+    <img class="float-left myval" src="logo.png" alt="Logo">
+    <img class="float-right meril" src="merilLogo.png" alt="Logo">
     <div>
-      <h1 class="mb-4 text-center">Personal Details</h1>
+      <h1 class="text-center">Take the TAVR Quiz</h1>
+      <h6 class="text-center">Enter the below details to start the quiz.</h6>
+      <h6 class="text-center mb-4 ">We will use these details to contact you for lucky draw.</h6>
     </div>
     <form id="myForm" >
       <div class="form-group">
         <label for="name">Name (required)</label>
-        <div class="form-row">
+        <!-- <div class="form-row">
           <div class="col-2 my-1">
             <select name="salutation" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
               <option value="Dr.">Dr.</option>
@@ -28,6 +31,12 @@
           <div class="col-10 my-1">
             <input required type="text" name="name" class="form-control" id="name">
           </div>
+        </div> -->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Dr.</span>
+          </div>
+          <input required type="text" name="name" class="form-control" id="name">
         </div>
       </div>
       <div class="form-group">
@@ -45,7 +54,7 @@
       <div class="form-group">
         <label for="email">Email address (required)</label>
         <input required type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
       </div>
       <!-- <button id="submit" type="submit" class="btn btn-primary float-right">Start Quiz</button> -->
       <!-- onclick="return false;" -->

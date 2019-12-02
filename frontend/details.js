@@ -66,7 +66,8 @@ function postData(data){
     "data": JSON.stringify(data),
     success: (res)=>{
       // console.log(res);
-      window.location.href = "quiz.html?id="+res._id+"&name="+(res.salutation+" "+res.name);
+      // window.location.href = "quiz.html?id="+res._id+"&name="+(res.salutation+" "+res.name);
+      window.location.href = "quiz.html?id="+res._id+"&name="+("Dr. "+res.name);
     }
   })
 }

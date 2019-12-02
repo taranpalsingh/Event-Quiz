@@ -4,12 +4,12 @@ label{
 }
 
 h1{
-	line-height: 75px;
+	/* line-height: 75px; */
 }
-img{
+.myval{
 	width: 150px;
-	height: 75px;
-	position: fixed;
+	height: 90px;
+	/* position: fixed; */
 }
 
 body{
@@ -21,6 +21,7 @@ body{
 .reqd{
 	border-color: red;
 }
+
 .btn, .btn:hover{
     background-color: #8f248d;
     color: white;

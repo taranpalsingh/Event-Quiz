@@ -61,6 +61,13 @@ const qaBank = [
 
 function restartQuestion(){
   
+  // console.log("questionNumber: "+questionNumber);
+  
+  if(questionNumber >= 4){
+    $(".submit-btn").html("Submit");
+  }
+  else
+    $(".submit-btn").html("Next");
   $(".submit-btn").css("background-color","#bc82d3");   
   // console.log(questionNumber)
   if(questionNumber==5){
