@@ -75,7 +75,7 @@ function restartQuestion(){
       // "data": JSON.stringify(data),
       success: (res)=>{
         
-        alert("Your score is: "+score);
+        // alert("Your score is: "+score);
         window.location.href = "result.html?name="+name+"&score="+score;
         // console.log(res);
       }
