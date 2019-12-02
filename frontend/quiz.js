@@ -2,61 +2,112 @@ let prevClicked = null;
 let score = 0, id, name;
 let questionNumber = 0;
 let questionSelected, options, answer;
-const qaBank = [
-  {
-      "question": "TAVR is an established treatment modality for:",
-      "options":[
-          "Severe Aortic valve stenosis",
-          "Severe Coronary artery stenosis",
-          "Repairing a thoracic aneurysm"
-      ],
-      "correct": 0
-  },
-  {
-      "question": "Full form of TAVR is:",
-      "options":[
-          "Transcaval Aortic Vascular Repair",
-          "Transcatheter Aortic Valve Replacement",
-          "Transfemoral Artery Vascular Repair"
-      ],
-      "correct": 1
-  },
-  {
-      "question": "Benefits of TAVR:",
-      "options":[
-          "Non-Surgical",
-          "Faster Recovery",
-          "No Chest Scars",
-          "Faster discharge",
-          "All of above",
-          "None of the above"
-      ],
-      "correct": 4
-  },
-  {
-      "question": "Diagnostic tests for Severe Aortic stenosis include:",
-      "options":[
-          "ECHO",
-          "ECG",
-          "CT Scan",
-          "MRI", 
-          "Options 1,2,3", 
-          "Options 2,3,4",
-          "All of above",
-          "None of the above"
-      ],
-      "correct": 4
-  },
-  {
-      "question": "Brand name of First Indian TAVR Device:",
-      "options":[
-          "Myvalve",
-          "Myval",
-          "Meres",
-          "Biomime"
-      ],
-      "correct": 1
-  }
+let qaBank = [
+  [
+      {
+          "question": "TAVR is an established treatment modality for:",
+          "options":[
+              "1. Severe Aortic valve stenosis",
+              "2. Severe Coronary artery stenosis",
+              "3. Repairing a thoracic aneurysm"
+          ],
+          "correct": 0
+      },
+      {
+          "question": "Full form of TAVR is:",
+          "options":[
+              "1. Transcaval Aortic Vascular Repair",
+              "2. Transcatheter Aortic Valve Replacement",
+              "3. Transfemoral Artery Vascular Repair"
+          ],
+          "correct": 1
+      },
+      {
+          "question": "Benefits of TAVR:",
+          "options":[
+              "1. Non-Surgical",
+              "2. Faster Recovery",
+              "3. No Chest Scars",
+              "4. Faster discharge",
+              "5. All of above",
+              "6. None of the above"
+          ],
+          "correct": 4
+      },
+      {
+          "question": "Diagnostic tests for Severe Aortic stenosis include:",
+          "options":[
+              "1. ECHO",
+              "2. ECG",
+              "3. CT Scan",
+              "4. MRI", 
+              "5. Options 1,2,3", 
+              "6. Options 2,3,4",
+              "7. All of above",
+              "8. None of the above"
+          ],
+          "correct": 4
+      },
+      {
+          "question": "Brand name of First Indian TAVR Device:",
+          "options":[
+              "1. Myvalve",
+              "2. Myval",
+              "3. Meres",
+              "4. Biomime"
+          ],
+          "correct": 1
+      }
+
+  ],
+  [
+      {
+          "question": "Meril is the First Indian company in the world to launch a Non-Surgical Aortic valve replacement therapy:",
+          "options":[
+              "1. Yes",
+              "2. No"
+          ],
+          "correct": 0
+      },
+      {
+          "question": "Meril’s Myval THV is CE Approved and launched in Europe, true or false?:",
+          "options":[
+              "1. True",
+              "2. False"
+          ],
+          "correct": 0
+      },
+      {
+          "question": "Latest clinical data suggests, TAVR is now a preferred therapy for following patients with Severe Aortic Valve Stenosis who also are:",
+          "options":[
+              "1. High risk to Surgery",
+              "2. Intermediate risk to Surgery",
+              "3. Low risk to Surgery",
+              "4. All of above",
+              "5. None of above"
+          ],
+          "correct": 3
+      },
+      {
+          "question": "USP Tag line of Myval is:",
+          "options":[
+              "1. Preference for heart",
+              "2. Precision at heart",
+              "3. Live your life",
+              "4. Future is here"
+          ],
+          "correct": 1
+      },
+      {
+          "question": "Most of the patients get discharged on 3rd day after TAVR procedure, true or false?",
+          "options":[
+              "1. True",
+              "2. False"
+          ],
+          "correct": 0
+      }
+
+  ]
 ];
 
 function restartQuestion(){
@@ -108,6 +159,12 @@ function restartQuestion(){
 
 $(document).ready(()=>{
 
+  if(Math.random()>0.5)
+    qaBank = qaBank[0];
+  else
+    qaBank = qaBank[1];
+
+  console.log(qaBank[0].question)
   let params = (new URL(document.location)).searchParams;
   name = params.get("name");
   id = params.get("id");
@@ -117,7 +174,7 @@ $(document).ready(()=>{
   restartQuestion();
   
   $("#quit").click(()=>{
-    window.location.href = "details.html"
+    window.location.href = "index.html"
   });
 
   $("#submit").click(()=>{
@@ -128,19 +185,16 @@ $(document).ready(()=>{
     }
     else{
       if(prevClicked === answer){
-        console.log("correct");
         score++;
         questionNumber++;
-        restartQuestion();
-      
-        console.log("score: ",score);
-        
+        restartQuestion();      
       }
       else{
         questionNumber++;
         restartQuestion();
-        console.log("score: ",score);
       }
+      console.log("score: ",score);
+
     }
   })
 });
