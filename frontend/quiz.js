@@ -178,13 +178,11 @@ function restartQuestion(){
         "Content-Type": "application/json"
       },
       // "data": JSON.stringify(data),
-      success: (res)=>{
-        
-        // alert("Your score is: "+score);
+      success: (res)=>{                
         window.location.href = "result.html?name="+name+"&score="+score;
-        // console.log(res);
       }
     })
+    // window.location.href = "result.html?name="+name+"&score="+score;
   }
 
   prevClicked = null;
@@ -194,7 +192,7 @@ function restartQuestion(){
     questionSelected = qaBank[questionNumber];
     options = questionSelected.options;
     answer = questionSelected.options[questionSelected.correct];
-    console.log(answer);
+    // console.log(answer);
   
     $(".question").html(questionSelected.question);
     createOptions(options);
@@ -213,11 +211,11 @@ $(document).ready(()=>{
   else
     qaBank = qaBank[2];
 
-  console.log(qaBank[0].question)
+  // console.log(qaBank[0].question)
   let params = (new URL(document.location)).searchParams;
   name = params.get("name");
   id = params.get("id");
-  console.log(id + " , "+ name);
+  // console.log(id + " , "+ name);
   $(".playersName").html(name);
   
   restartQuestion();
@@ -242,7 +240,7 @@ $(document).ready(()=>{
         questionNumber++;
         restartQuestion();
       }
-      console.log("score: ",score);
+      // console.log("score: ",score);
 
     }
   })

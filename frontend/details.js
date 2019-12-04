@@ -44,7 +44,7 @@ $(document).ready(()=>{
 
     if(!invalid){ 
 
-      console.log(values);
+      // console.log(values);
       postData(values);
     }
   });
@@ -65,7 +65,7 @@ function postData(data){
     },
     "data": JSON.stringify(data),
     success: (res)=>{
-      // console.log(res);
+      console.log("done details");
       // window.location.href = "quiz.html?id="+res._id+"&name="+(res.salutation+" "+res.name);
       window.location.href = "quiz.html?id="+res._id+"&name="+("Dr. "+res.name);
     }

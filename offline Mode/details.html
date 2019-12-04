@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./details.css">
+  <title>Quiz</title>
+</head>
+<body>
+  <div class="container mt-3">
+    <img class="float-left myval" src="merilLogo.png" alt="Logo">
+    <img class="float-right myval" src="logo.png" alt="Logo">
+    <div>
+      <h1 class="text-center">Take the TAVR Quiz</h1>
+      <h6 class="text-center">Enter the below details to start the quiz.</h6>
+      <h6 class="text-center mb-4 ">We will use these details to contact you for lucky draw.</h6>
+    </div>
+    <form id="myForm" >
+      <div class="form-group">
+        <label for="name">Name (required)</label>
+        <!-- <div class="form-row">
+          <div class="col-2 my-1">
+            <select name="salutation" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option value="Dr.">Dr.</option>
+              <option value="Mr.">Mr.</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Mrs.">Mrs.</option>
+            </select>
+          </div>
+          <div class="col-10 my-1">
+            <input required type="text" name="name" class="form-control" id="name">
+          </div>
+        </div> -->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Dr.</span>
+          </div>
+          <input required type="text" name="name" class="form-control" id="name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hospitalName">Hospital Name (required)</label>
+        <input required type="text" name="hospital" class="form-control" id="hospitalName">
+      </div>
+      <div class="form-group">
+        <label for="city">City (required)</label>
+        <input required type="text" name="city" class="form-control" id="city">
+      </div>
+      <div class="form-group">
+        <label for="contact">Phone Number (required)</label>
+        <input required type="number" name="phone" class="form-control" id="contact">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address (required)</label>
+        <input required type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <!-- <button id="submit" type="submit" class="btn btn-primary float-right">Start Quiz</button> -->
+      <!-- onclick="return false;" -->
+    </form>
+    <button id="submit" type="submit" class="btn float-right">Start Quiz</button>
+    <button id="back" type="button" class="btn float-left">Go Back</button>
+  </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script src="./details.js"></script>
+</html>

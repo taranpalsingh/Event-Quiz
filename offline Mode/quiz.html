@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./quiz.css">
+  <title>Quiz</title>
+</head>
+<body>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-4">
+          <img class="float-left" src="logo.png" alt="Logo">
+      </div>
+      
+      <div class="col-4 text-center">
+          <h2 class="questionNumberDisplay"></h2>
+      </div>
+      <div class="col-4 text-right">
+          <h2 class="playersName"></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10 offset-md-1 text-center question">
+      </div>
+    </div>
+    <div class="space"></div>
+    <div class="row" id="optionsWrapper">
+      <!-- <div class="col-md-8 offset-md-2 option">
+        <div class="row">
+          <div class="col-2">
+              <input type="radio" name="one" class="form-control">
+          </div>
+          <div class="col-10">
+            One
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 offset-md-2 option">
+        <div class="row">
+          <div class="col-2">
+              <input type="radio" name="one" class="form-control">
+          </div>
+          <div class="col-10">
+            Two
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="col-md-8 offset-md-2 text-center option unselected">
+        One      
+      </div>
+      <div class="col-md-8 offset-md-2 text-center option chosen">
+        two     
+      </div>
+      <div class="col-md-8 offset-md-2 text-center option unselected">
+        three      
+      </div> -->
+    </div>
+    <!-- <div class="footer"> -->
+      <button class="btn quit-btn float-left" id="quit">Exit</button>
+      <button class="btn submit-btn float-right" id="submit"></button>    
+    <!-- </div> -->
+  </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script src="./quiz.js"></script>
+</html>

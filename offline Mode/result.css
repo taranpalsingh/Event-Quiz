@@ -1,0 +1,22 @@
+h1{
+	line-height: 75px;
+	font-size: 56px;
+}
+
+img{
+	width: 200px;
+	height: 100px;
+	margin-top: 8rem;
+	margin-bottom: 4rem;
+}
+
+body{
+	background-image: url("15002.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.btn, .btn:hover{
+    background-color: #8f248d;
+    color: white;
+}

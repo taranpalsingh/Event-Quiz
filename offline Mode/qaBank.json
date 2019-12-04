@@ -1,0 +1,108 @@
+[
+    [
+        {
+            "question": "TAVR is an established treatment modality for:",
+            "options":[
+                "Severe Aortic valve stenosis",
+                "Severe Coronary artery stenosis",
+                "Repairing a thoracic aneurysm"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Full form of TAVR is:",
+            "options":[
+                "Transcaval Aortic Vascular Repair",
+                "Transcatheter Aortic Valve Replacement",
+                "Transfemoral Artery Vascular Repair"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Benefits of TAVR:",
+            "options":[
+                "Non-Surgical",
+                "Faster Recovery",
+                "No Chest Scars",
+                "Faster discharge",
+                "All of above",
+                "None of the above"
+            ],
+            "correct": 4
+        },
+        {
+            "question": "Diagnostic tests for Severe Aortic stenosis include:",
+            "options":[
+                "ECHO",
+                "ECG",
+                "CT Scan",
+                "MRI", 
+                "Options 1,2,3", 
+                "Options 2,3,4",
+                "All of above",
+                "None of the above"
+            ],
+            "correct": 4
+        },
+        {
+            "question": "Brand name of First Indian TAVR Device:",
+            "options":[
+                "Myvalve",
+                "Myval",
+                "Meres",
+                "Biomime"
+            ],
+            "correct": 1
+        }
+
+    ],
+
+    [
+        {
+            "question": "Meril is the First Indian company in the world to launch a Non-Surgical Aortic valve replacement therapy:",
+            "options":[
+                "Yes",
+                "No"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Meril’s Myval THV is CE Approved and launched in Europe, true or false?:",
+            "options":[
+                "True",
+                "False"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Latest clinical data suggests, TAVR is now a preferred therapy for following patients with Severe Aortic Valve Stenosis who also are:",
+            "options":[
+                "High risk to Surgery",
+                "Intermediate risk to Surgery",
+                "Low risk to Surgery",
+                "All of above",
+                "None of above"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "USP Tag line of Myval is:",
+            "options":[
+                "Preference for heart",
+                "Precision at heart",
+                "Live your life",
+                "Future is here"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Most of the patients get discharged on 3rd day after TAVR procedure, true or false?",
+            "options":[
+                "True",
+                "False"
+            ],
+            "correct": 0
+        }
+
+    ]
+]

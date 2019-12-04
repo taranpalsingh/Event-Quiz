@@ -1,0 +1,28 @@
+label{
+	font-weight: 500;
+	font-size: 20px;
+}
+
+h1{
+	/* line-height: 75px; */
+}
+.myval{
+	width: 150px;
+	height: 90px;
+	/* position: fixed; */
+}
+
+body{
+	background-image: url("15002.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.reqd{
+	border-color: red;
+}
+
+.btn, .btn:hover{
+    background-color: #8f248d;
+    color: white;
+}
