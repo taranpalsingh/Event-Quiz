@@ -110,6 +110,33 @@ let qaBank = [
   ],
   [
       {
+          "question": "TAVR is a non-surgical minimally invasive procedure, true or false?",
+          "options":[
+              "1. True",
+              "2. False"
+          ],
+          "correct": 0
+      },
+      {
+          "question": "Full form of TAVR is:",
+          "options":[
+              "1. Transcaval Aortic Vascular Repair",
+              "2. Transcatheter Aortic Valve Replacement",
+              "3. Transfemoral Artery Vascular Repair"
+          ],
+          "correct": 1
+      },
+      {
+          "question": "Brand name of First Indian TAVR Device:",
+          "options":[
+              "1. Myvalve",
+              "2. Myval",
+              "3. Meres",
+              "4. Biomime"
+          ],
+          "correct": 1
+      },
+      {
           "question": "Meril’s Myval THV is CE Approved and launched in Europe, true or false?:",
           "options":[
               "1. True",
@@ -126,36 +153,7 @@ let qaBank = [
               "4. Future is here"
           ],
           "correct": 1
-      },
-      {
-          "question": "USP Tag line of Myval is:",
-          "options":[
-              "1. Preference for heart",
-              "2. Precision at heart",
-              "3. Live your life",
-              "4. Future is here"
-          ],
-          "correct": 1
-      },
-      {
-          "question": "USP Tag line of Myval is:",
-          "options":[
-              "1. Preference for heart",
-              "2. Precision at heart",
-              "3. Live your life",
-              "4. Future is here"
-          ],
-          "correct": 1
-      },
-      {
-          "question": "TAVR is a non-surgical minimally invasive procedure, true or false?",
-          "options":[
-              "1. True",
-              "2. False"
-          ],
-          "correct": 0
       }
-
   ]
 ];
 
