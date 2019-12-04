@@ -19,7 +19,6 @@ mongoose.connect(atlasDb, {useUnifiedTopology: true, useNewUrlParser: true}, (er
 
 const userSchema = new mongoose.Schema({
     "name":String,
-    // "salutation":String,
     "hospital":String,
     "city":String,
     "phone":Number,

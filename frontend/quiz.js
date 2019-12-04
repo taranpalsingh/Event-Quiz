@@ -107,6 +107,55 @@ let qaBank = [
           "correct": 0
       }
 
+  ],
+  [
+      {
+          "question": "Meril’s Myval THV is CE Approved and launched in Europe, true or false?:",
+          "options":[
+              "1. True",
+              "2. False"
+          ],
+          "correct": 0
+      },
+      {
+          "question": "USP Tag line of Myval is:",
+          "options":[
+              "1. Preference for heart",
+              "2. Precision at heart",
+              "3. Live your life",
+              "4. Future is here"
+          ],
+          "correct": 1
+      },
+      {
+          "question": "USP Tag line of Myval is:",
+          "options":[
+              "1. Preference for heart",
+              "2. Precision at heart",
+              "3. Live your life",
+              "4. Future is here"
+          ],
+          "correct": 1
+      },
+      {
+          "question": "USP Tag line of Myval is:",
+          "options":[
+              "1. Preference for heart",
+              "2. Precision at heart",
+              "3. Live your life",
+              "4. Future is here"
+          ],
+          "correct": 1
+      },
+      {
+          "question": "TAVR is a non-surgical minimally invasive procedure, true or false?",
+          "options":[
+              "1. True",
+              "2. False"
+          ],
+          "correct": 0
+      }
+
   ]
 ];
 
@@ -159,10 +208,12 @@ function restartQuestion(){
 
 $(document).ready(()=>{
 
-  if(Math.random()>0.5)
+  if(Math.random()<0.33)
     qaBank = qaBank[0];
-  else
+  else if(Math.random()>0.33 && Math.random()<0.66)
     qaBank = qaBank[1];
+  else
+    qaBank = qaBank[2];
 
   console.log(qaBank[0].question)
   let params = (new URL(document.location)).searchParams;
